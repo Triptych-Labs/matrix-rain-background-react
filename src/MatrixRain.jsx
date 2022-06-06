@@ -79,9 +79,9 @@ const RainStream = props => {
 
 	return (
 		<div
+      id="matrixrain-column"
 			style={{
 				fontFamily: 'matrixFont',
-				color: '#20c20e',
 				writingMode: 'vertical-rl',
 				textOrientation: 'upright',
 				userSelect: 'none',
@@ -89,7 +89,7 @@ const RainStream = props => {
 				marginTop: topPadding,
 				marginLeft: -15,
 				marginRight: -15,
-				textShadow: '0px 0px 8px rgba(32, 194, 14, 0.8)',
+				textShadow: '0px 0px 8px rgba(220,220,220, 0.8)',
 				fontSize: 50,
 			}}>
 			{stream.map((char, index) => (
@@ -98,7 +98,6 @@ const RainStream = props => {
 						marginTop: -12,
 						// Reduce opacity for last chars
 						opacity: index < 6 ? 0.1 + index * 0.15 : 1,
-						color: index === stream.length - 1 ? '#fff' : undefined,
 						textShadow:
 							index === stream.length - 1
 								? '0px 0px 20px rgba(255, 255, 255, 1)'
@@ -127,8 +126,8 @@ const MatrixRain = props => {
 
 	return (
 		<div
+      id="matrixrain-bg"
 			style={{
-				background: 'black',
 				position: 'fixed',
 				top: 0,
 				left: 0,
